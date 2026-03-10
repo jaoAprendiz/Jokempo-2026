@@ -54,22 +54,26 @@ class Program
 
     static string ObterNomeJogador()
     {
-        Console.WriteLine("\nPara começar, como eu devo chamar você? (Digite o seu nome): ");
-        string nome = Console.ReadLine();
+        Console.WriteLine("\nDigite o seu nome: ");
+        string nome = Console.ReadLine()?.Trim();
 
-        while (string.IsNullOrWhiteSpace(nome))
+        if (jogadores.ContainsKey(nome))
         {
-            Console.WriteLine("Ops! Parece que você digitou um nome inválido. Por favor, tente novamente.");
-            nome = Console.ReadLine();
-        }
+            Console.WriteLine($"⚠️ O jogador '{nome}' já existe. Deseja usar este perfil? (S/N)");
+            char resp = Console.ReadKey(true).KeyChar;
 
-        // Se o jogador não existir no dicionário, cria um novo perfil com stats zerados
-        if (!jogadores.ContainsKey(nome))
+            if (char.ToUpper(resp) != 'S')
+            {
+                return ObterNomeJogador();
+            }
+            Console.WriteLine($"\nLogado como: {nome}");
+        }
+        else
         {
             jogadores[nome] = (0, 0, 0);
+            Console.WriteLine($"\nNovo perfil criado: {nome}");
         }
 
-        Console.WriteLine($"\nEntão vamos começar, {nome}!");
         return nome;
     }
 
