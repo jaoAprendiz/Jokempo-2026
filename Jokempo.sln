@@ -5,9 +5,9 @@ VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jokempo", "Jokempo\Jokempo.csproj", "{F8A4F434-4031-4A3E-AF73-40A7422CB2D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface_Jokempo", "Interface_Jokempo\Interface_Jokempo.csproj", "{32B2BEEF-17BF-4BF7-A28F-DD5E5B72C866}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jokempo.WinForms", "Interface_Jokempo\Jokempo.WinForms.csproj", "{32B2BEEF-17BF-4BF7-A28F-DD5E5B72C866}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbtracaoInteface", "AbtracaoInteface\AbtracaoInteface.csproj", "{86802FB0-83A1-499E-BC9A-6A1A94134A44}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jokempo.Core", "AbtracaoInteface\Jokempo.Core.csproj", "{86802FB0-83A1-499E-BC9A-6A1A94134A44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
